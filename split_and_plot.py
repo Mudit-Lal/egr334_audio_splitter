@@ -14,8 +14,7 @@ def bandpass_filter(data, sos):
     return y
 
 def plot_waveforms(y, y_low, y_mid, y_high, sr):
-    # Select a segment for plotting (e.g., first 10 seconds)
-    duration = 10  # seconds
+    duration = 30  # seconds of song to be plotted
     samples = int(duration * sr)
     time = np.linspace(0, duration, samples)
 
@@ -46,8 +45,7 @@ def plot_waveforms(y, y_low, y_mid, y_high, sr):
     plt.show()
 
 def main():
-    # Load the audio file
-    audio_file = 'your_song.mp3'  # Replace with your audio file path
+    audio_file = 'input_audio.mp3'
     y, sr = librosa.load(audio_file, sr=None, mono=True)
     print(f"Loaded '{audio_file}' with sample rate {sr} Hz.")
 
@@ -56,7 +54,7 @@ def main():
     mid_band = (250, 4000)     # Mid frequencies: 250 Hz to 4 kHz
     high_band = (4000, 20000)  # High frequencies: 4 kHz to 20 kHz
 
-    # Create band-pass filters
+    # Band-pass filters
     sos_low = butter_bandpass(low_band[0], low_band[1], sr, order=4)
     sos_mid = butter_bandpass(mid_band[0], mid_band[1], sr, order=4)
     sos_high = butter_bandpass(high_band[0], high_band[1], sr, order=4)
@@ -74,10 +72,8 @@ def main():
     y_mid /= np.max(np.abs(y_mid)) + 1e-6
     y_high /= np.max(np.abs(y_high)) + 1e-6
 
-    # Plot the waveforms
     plot_waveforms(y, y_low, y_mid, y_high, sr)
 
-    # Save the filtered signals
     print("Saving separated audio files...")
     sf.write('low_frequencies.wav', y_low, sr)
     sf.write('mid_frequencies.wav', y_mid, sr)
