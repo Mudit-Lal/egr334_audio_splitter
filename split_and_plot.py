@@ -14,7 +14,7 @@ def bandpass_filter(data, sos):
     return y
 
 def plot_waveforms(y, y_low, y_mid, y_high, sr):
-    duration = 30  # seconds of song to be plotted
+    duration = 60  # seconds of song to be plotted
     samples = int(duration * sr)
     time = np.linspace(0, duration, samples)
 
@@ -45,7 +45,7 @@ def plot_waveforms(y, y_low, y_mid, y_high, sr):
     plt.show()
 
 def main():
-    audio_file = 'input_audio.mp3'
+    audio_file = 'taka.mp3'
     y, sr = librosa.load(audio_file, sr=None, mono=True)
     print(f"Loaded '{audio_file}' with sample rate {sr} Hz.")
 
