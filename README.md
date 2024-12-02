@@ -1,6 +1,6 @@
 # egr334_audio_splitter
 
-This repository contains methods and tools for audio separation and manipulation, designed for use in the EGR 334 course. Below is an overview of the project structure, requirements, and usage instructions.
+This repository contains methods and tools for audio separation and manipulation, designed for use in the EGR 334 Final Project. Below is an overview of the project structure, requirements, and usage instructions.
 
 ---
 
