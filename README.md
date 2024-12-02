@@ -80,3 +80,4 @@ This section explores third-party libraries for audio splitting and manipulation
    - Explore the `Trying Existing Libraries` folder for experiments and additional insights.
    - Install the necessary tools and libraries before running the scripts.
 
+ReadMe written with help of OpenAI. (2024). ChatGPT [Large language model]. https://chatgpt.com
