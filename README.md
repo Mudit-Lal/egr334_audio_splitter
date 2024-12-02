@@ -10,9 +10,9 @@ This repository contains methods and tools for audio separation and manipulation
 Tools and scripts for separating audio tracks by instrument (e.g., vocals, drums, bass). This is ideal for creating backing tracks or isolating specific parts of an audio recording for analysis.
 
 #### **Requirements**:
-- **spleeter**: A pre-trained library for instrument separation. Install with:
-- **numpy**: For numerical operations and data handling. Install with:
-- **librosa**: For audio analysis and processing. Install with:
+- **numpy**: For numerical operations and data handling.
+- **librosa**: For audio analysis and processing.
+
   ```bash
   pip install librosa numpy spleeter
   ```
@@ -23,9 +23,10 @@ Tools and scripts for separating audio tracks by instrument (e.g., vocals, drums
 This method splits audio into frequency ranges—lows, mids, and highs. It is commonly used for equalization analysis or creative audio remixing.
 
 #### **Requirements**:
-- **scipy**: For signal processing and transformations. Install with:
-- **numpy**: For numerical operations and frequency computations. Install with:
-- **matplotlib**: For visualizing frequency spectrums. Install with:
+- **scipy**: For signal processing and transformations.
+- **numpy**: For numerical operations and frequency computations.
+- **matplotlib**: For visualizing frequency spectrums.
+
   ```bash
   pip install matplotlib numpy scipy
   ```
