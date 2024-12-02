@@ -11,16 +11,10 @@ Tools and scripts for separating audio tracks by instrument (e.g., vocals, drums
 
 #### **Requirements**:
 - **spleeter**: A pre-trained library for instrument separation. Install with:
-  ```bash
-  pip install spleeter
-  ```
 - **numpy**: For numerical operations and data handling. Install with:
-  ```bash
-  pip install numpy
-  ```
 - **librosa**: For audio analysis and processing. Install with:
   ```bash
-  pip install librosa
+  pip install librosa numpy spleeter
   ```
 
 ---
@@ -30,16 +24,10 @@ This method splits audio into frequency ranges—lows, mids, and highs. It is co
 
 #### **Requirements**:
 - **scipy**: For signal processing and transformations. Install with:
-  ```bash
-  pip install scipy
-  ```
 - **numpy**: For numerical operations and frequency computations. Install with:
-  ```bash
-  pip install numpy
-  ```
 - **matplotlib**: For visualizing frequency spectrums. Install with:
   ```bash
-  pip install matplotlib
+  pip install matplotlib numpy scipy
   ```
 
 ---
@@ -51,7 +39,7 @@ This section explores third-party libraries for audio splitting and manipulation
 - **ffmpeg**: A powerful tool for handling audio and video files. Install it from the [official website](https://ffmpeg.org/).
 - **pydub**: For simple and high-level audio editing. Install with:
   ```bash
-  pip install pydub
+  pip install pydub demuc ffmpeg
   ```
 
 ---
