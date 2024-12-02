@@ -2,6 +2,7 @@ import numpy as np
 import librosa
 import soundfile as sf
 from scipy.signal import butter, sosfilt
+import matplotlib.pyplot as plt
 
 instrument_freq_ranges = {
     'violin': (196, 3520),        # G3 to A7
@@ -64,6 +65,28 @@ def main():
         normalized_data = filtered_data / max_val
     else:
         normalized_data = filtered_data
+
+    # Create subplots for original and filtered waveforms
+    fig, axs = plt.subplots(2, 1, figsize=(14, 10))
+
+    # Time axis for plotting
+    time_axis = np.linspace(0, len(data) / sample_rate, num=len(data))
+
+    # Plot the original waveform
+    axs[0].plot(time_axis, data)
+    axs[0].set_title('Original Audio Waveform')
+    axs[0].set_xlabel('Time (s)')
+    axs[0].set_ylabel('Amplitude')
+
+    # Plot the filtered waveform
+    axs[1].plot(time_axis, normalized_data)
+    axs[1].set_title(f'Filtered Audio Waveform - {selected_instrument.capitalize()}')
+    axs[1].set_xlabel('Time (s)')
+    axs[1].set_ylabel('Amplitude')
+
+    # Adjust layout and display the plots
+    plt.tight_layout()
+    plt.show()
 
     # Save the output audio file
     sf.write(output_file, normalized_data, sample_rate)
