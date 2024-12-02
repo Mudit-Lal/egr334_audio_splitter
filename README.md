@@ -1,73 +1,82 @@
-# Constructing a README.md file with requirements for each method based on the directory contents
-
-# Paths to each method folder
-method_1_path = os.path.join(main_directory_path, 'Method 1 - Instrument Seperation')
-method_2_path = os.path.join(main_directory_path, 'Method 2 - Lows, Mids, Highs')
-libraries_path = os.path.join(main_directory_path, 'Trying Existing Libraries')
-
-# Sample requirements for each method based on typical audio processing needs
-method_1_requirements = """
-Required Libraries:
-- spleeter (for instrument separation): Install with `pip install spleeter`
-- numpy (for numerical operations): Install with `pip install numpy`
-- librosa (for audio analysis): Install with `pip install librosa`
-"""
-
-method_2_requirements = """
-Required Libraries:
-- scipy (for signal processing): Install with `pip install scipy`
-- numpy (for numerical operations): Install with `pip install numpy`
-- matplotlib (for visualization): Install with `pip install matplotlib`
-"""
-
-libraries_requirements = """
-Required Libraries:
-- ffmpeg (for audio handling): Install from [FFmpeg](https://ffmpeg.org/)
-- pydub (for audio editing): Install with `pip install pydub`
-"""
-
-# Assembling the README.md content
-readme_content = f"""
 # egr334_audio_splitter
 
-This repository contains methods and tools for audio separation and manipulation, designed for use in the EGR 334 course. Below is an overview of the project structure and usage.
+This repository contains methods and tools for audio separation and manipulation, designed for use in the EGR 334 course. Below is an overview of the project structure, requirements, and usage instructions.
+
+---
 
 ## Project Structure
 
-### Method 1 - Instrument Separation
-Tools and scripts for separating audio tracks by instrument (e.g., vocals, drums, bass). Ideal for creating backing tracks or isolating parts for analysis.
+### **Method 1 - Instrument Separation**
+Tools and scripts for separating audio tracks by instrument (e.g., vocals, drums, bass). This is ideal for creating backing tracks or isolating specific parts of an audio recording for analysis.
 
-**Requirements:**{method_1_requirements}
-
-### Method 2 - Lows, Mids, Highs
-A method for splitting audio into frequency ranges (lows, mids, highs), commonly used for EQ analysis or remixing.
-
-**Requirements:**{method_2_requirements}
-
-### Trying Existing Libraries
-Exploration of third-party libraries for audio splitting and manipulation.
-
-**Requirements:**{libraries_requirements}
-
-## Installation
-
-To set up the project environment, ensure you have Python 3.7 or higher installed, then install the necessary dependencies for each method as listed above.
-
-## Usage
-
-1. Navigate to the respective method directory (e.g., `Method 1 - Instrument Separation`) and follow the script instructions.
-2. For external library testing, explore the `Trying Existing Libraries` folder for setup and execution details.
-
-## Contributions
-
-Contributions to improve or expand the project are welcome! Please follow these steps:
-1. Fork the repository.
-2. Create a new branch for your feature or bugfix.
-3. Submit a pull request with a detailed description of changes.
-
-## License
-
-Include a license file (if missing) to clarify the usage and distribution rights.
+#### **Requirements**:
+- **spleeter**: A pre-trained library for instrument separation. Install with:
+  ```bash
+  pip install spleeter
+  ```
+- **numpy**: For numerical operations and data handling. Install with:
+  ```bash
+  pip install numpy
+  ```
+- **librosa**: For audio analysis and processing. Install with:
+  ```bash
+  pip install librosa
+  ```
 
 ---
-"""
+
+### **Method 2 - Lows, Mids, Highs**
+This method splits audio into frequency ranges—lows, mids, and highs. It is commonly used for equalization analysis or creative audio remixing.
+
+#### **Requirements**:
+- **scipy**: For signal processing and transformations. Install with:
+  ```bash
+  pip install scipy
+  ```
+- **numpy**: For numerical operations and frequency computations. Install with:
+  ```bash
+  pip install numpy
+  ```
+- **matplotlib**: For visualizing frequency spectrums. Install with:
+  ```bash
+  pip install matplotlib
+  ```
+
+---
+
+### **Trying Existing Libraries**
+This section explores third-party libraries for audio splitting and manipulation, serving as an evaluation of alternative approaches.
+
+#### **Requirements**:
+- **ffmpeg**: A powerful tool for handling audio and video files. Install it from the [official website](https://ffmpeg.org/).
+- **pydub**: For simple and high-level audio editing. Install with:
+  ```bash
+  pip install pydub
+  ```
+
+---
+
+## Installation Instructions
+
+1. Ensure you have **Python 3.7 or higher** installed.
+2. Install dependencies for each method using the provided commands under their respective sections.
+3. Verify that additional tools like **FFmpeg** are installed and accessible via your system's PATH if using third-party libraries.
+
+---
+
+## Usage Instructions
+
+1. **Instrument Separation (Method 1)**:
+   - Navigate to the `Method 1 - Instrument Separation` directory.
+   - Run the provided script(s) to process your audio file.
+   - Refer to the comments within the scripts for input/output details.
+
+2. **Frequency Splitting (Method 2)**:
+   - Navigate to the `Method 2 - Lows, Mids, Highs` directory.
+   - Execute the appropriate script to split your audio file into frequency bands.
+   - Follow script instructions for further analysis or export.
+
+3. **Using Existing Libraries**:
+   - Explore the `Trying Existing Libraries` folder for experiments and additional insights.
+   - Install the necessary tools and libraries before running the scripts.
+
